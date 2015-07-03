@@ -1,0 +1,16 @@
+{#
+Copyright 2015 Jason Heeris <jason.heeris@gmail.com>
+
+This file is part of the 'flaskery' application, and is licensed under the MIT
+license.
+#}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block page_title %}{% endblock %}</title>
+    </head>
+    <body class="{{page_class}}">
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

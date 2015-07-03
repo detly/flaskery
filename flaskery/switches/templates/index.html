@@ -1,0 +1,36 @@
+{#
+Copyright 2015 Jason Heeris <jason.heeris@gmail.com>
+
+This file is part of the 'flaskery' application, and is licensed under the MIT
+license.
+#}
+{% extends "base.html" %}
+
+{% block page_title %}Hello{% endblock %}
+
+{% block content %}
+<h1>Hello world</h1>
+
+<form action="./change" method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+
+    <p class="state-id">
+    ID: {{ state.id }}
+    </p>
+
+    <p class="timestamp">
+    Touched: {{ state.touched }}
+    </p>
+
+    <p class="state-one">
+    Current: {{ state.one }}
+    {{ form.set_one(value=label_for("one", state.one)) }}
+    </p>
+
+    <p class="state-two">
+    Current: {{ state.two }}
+    {{ form.set_two(value=label_for("two", state.two)) }}
+    </p>
+</form>
+
+{% endblock %}
