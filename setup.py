@@ -16,7 +16,8 @@ setup(
     install_requires = [
         'flask',
         'alchy',
-        'flask_alchy'
+        'flask-alchy',
+        'flask-wtf'
     ],
     
     entry_points = {
