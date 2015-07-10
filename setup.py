@@ -10,11 +10,13 @@ setup(
     packages = find_packages(),
     
     package_data = {
-        'flaskery': ['templates/*.html'],
+        'flaskery': ['switches/templates/*.html'],
     },
     
     install_requires = [
         'flask',
+        'alchy',
+        'flask_alchy'
     ],
     
     entry_points = {
