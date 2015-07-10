@@ -7,6 +7,7 @@ import argparse
 from flask import Flask, session
 from flask_alchy import Alchy
 from flaskery.switches.state import SwitchesState
+from flaskery.switches.switches import switches_app
 
 HELP_TEXT = """\
 Silly demo app for stomping around Flask."""
@@ -19,9 +20,6 @@ app.config.from_object('config')
 
 # The database.
 db = Alchy(app, Model=SwitchesState)
-
-# OMG flask.
-from flaskery.switches.switches import switches_app
 
 # The switches module.
 app.register_blueprint(switches_app)

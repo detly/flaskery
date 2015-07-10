@@ -15,7 +15,7 @@ license.
     {{ form.csrf_token }}
 
     <p class="state-id">
-    ID: {{ state.id }}
+    Key: {{ format_bytes(state.key) }}
     </p>
 
     <p class="timestamp">
